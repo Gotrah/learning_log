@@ -102,6 +102,4 @@ def edit_entry(request, entry_id):
 
 
 def check_topic_owner(request, topic):
-    topic.owner != request.url
-
-
+    return topic.owner == request.user
